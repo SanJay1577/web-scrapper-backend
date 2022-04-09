@@ -14,7 +14,7 @@ import { DashRouter } from "./routes/dashBoad.js";
 dotenv.config();
 
 const app = express();
-const PORT = 8100;
+const PORT = process.env.PORT;
 
 //Mongo connection
 MongoConnect();
