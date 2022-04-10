@@ -100,6 +100,8 @@ router.post("/", async (req, res) => {
           productUrl: url,
         }).save();
 
+if(!flipkart) 
+return "Could Not Scrape the Above data";
         await User.findOneAndUpdate(
           { _id: user._id },
           { $addToSet: { flipkartScrape: flipkart._id } }
