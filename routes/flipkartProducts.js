@@ -98,10 +98,7 @@ router.post("/", async (req, res) => {
           buyPrice: price,
           productImage: productUrl,
           productUrl: url,
-        }).save();
-
-     if(!flipkart)
-     return "Could Not Scrape the Above data";
+        }).save();   
 
         await User.findOneAndUpdate(
           { _id: user._id },
